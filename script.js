@@ -19,9 +19,9 @@ const generateComputerChoice = () => {
     const rand = Math.floor(Math.random() * 3) + 1;
     if(rand === 1)
         computerChoice = "Rock";
-    else if(rand === 2)
+    if(rand === 2)
         computerChoice = "Paper";
-    else
+    if(rand === 3)
         computerChoice = "Scissors";
 
     computerChoiceDisplay.innerHTML = computerChoice;
@@ -30,30 +30,31 @@ const generateComputerChoice = () => {
 const victoryOrLoss = (userChoice, computerChoice) => {
     if(userChoice === "Rock")
     {
-        if(computerChoice = "Rock")
+        if(computerChoice === "Rock")
             result = "Tie";
-        else if(computerChoice = "Paper")
+        if(computerChoice === "Paper")
             result = "Loss";
-        else
+        if(computerChoice === "Scissors")
             result = "Victory";
     }
-    else if(userChoice === "Paper")
+    if(userChoice === "Paper")
     {
-        if(computerChoice = "Rock")
+        if(computerChoice === "Rock")
             result = "Victory";
-        else if(computerChoice = "Paper")
+        if(computerChoice === "Paper")
             result = "Tie";
-        else
+        if(computerChoice === "Scissors")
             result = "Loss";
     }
-    else
+    if(userChoice === "Scissors")
     {
-        if(computerChoice = "Rock")
+        if(computerChoice === "Rock")
             result = "Loss";
-        else if(computerChoice = "Paper")
+        if(computerChoice === "Paper")
             result = "Victory";
-        else
+        if(computerChoice === "Scissors")
             result = "Tie";
+
     }
 
     resultDisplay.innerHTML = result;
